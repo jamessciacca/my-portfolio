@@ -11,7 +11,7 @@ function Header() {
             {/* Logo Image and Text */}
             <h1 className="ml-2 text-xl">JS</h1>
             {/* Nav Items */}
-            <ul className="flex">
+            <ul className="flex items-center">
                 <li><a href="">About Me</a></li>
                 {/* added spacing between links */}
                 <li className="ml-2 mr-2"><a href="">Projects</a></li>
