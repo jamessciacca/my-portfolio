@@ -28,8 +28,8 @@ code {
 /* contact button styling */
 #contactBtn {
   background-color: #FDA769;
-  transition: 0.1s ease-in-out;
   color: #27374D;
+  border: #27374D 3px solid;
 }
 
 #contactBtn:hover {
@@ -97,7 +97,7 @@ code {
   animation: fadeInUp 2s ease forwards;
 }
 
-#fullStack, #bio, #contactBtn, #header{
+#fullStack, #bio, #contactBtn, #header, #projectSection{
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 2s ease forwards;
@@ -122,7 +122,8 @@ code {
 #bio,
 #contactBtn,
 #header,
-#memoji{
+#memoji,
+#projectSection{
     animation: none;
     opacity: 1;
 }
@@ -218,4 +219,109 @@ code {
 
 @media (min-width: 850px) {
   
+}
+
+/* just while working  */
+ #projectSection {
+  margin-bottom:  500px;
+}
+
+/* project cards */
+#project{
+  background-color: #27374D;
+  color: #FDA769;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  transition: 0.1s ease-in-out;
+  font-family: monospace;
+  perspective: 1000px;
+}
+
+#project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-bottom: 50px;
+}
+
+#projectSection a {
+  color: #BBBBBB;
+  border: #BBBBBB 2px solid;
+}
+
+#projectSection a:hover{
+  border: 2px solid #FDA769;
+  background-color: #526D82;
+  color: #FDA769;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3c3a3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: white;
+  transform: translateY(-200px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-header, .modal-footer {
+  padding: 10px;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal.show{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+#description:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  a{
+    font-size: x-small;
+  }
+}
+
+#projectsh1 {
+  font-family: monospace;
+  font-size: 48px;
+  color: #27374D; 
+  text-align: center;
+  margin: 40px; 
+  padding: 10px 0;
+  border-top: 4px solid #27374D; 
+  border-bottom: 4px solid #27374D; 
 }
