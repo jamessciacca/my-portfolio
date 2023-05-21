@@ -106,7 +106,7 @@ code {
   animation: fadeInDown 2s ease forwards;
 }
 
-#fullStack, #bio, #contactBtn, #header, #projectSection, #socials, #contactForm{
+#fullStack, #bio, #contactBtn, #header, #projectSection, #socials, #contactForm, #footer{
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 2s ease forwards;
@@ -134,7 +134,8 @@ code {
 #memoji,
 #projectSection,
 #socials,
-#contactForm{
+#contactForm,
+#footer{
     animation: none;
     opacity: 1;
 }
@@ -327,7 +328,7 @@ hr {
 #projectsh1 {
   font-family: monospace;
   font-size: 48px;
-  color: #27374D; 
+  color: #FDA769; 
   text-align: center;
   justify-content: center;
   margin: 40px; 
@@ -340,12 +341,12 @@ hr {
 #contacth1{
   font-family: monospace;
   font-size: 48px;
-  color: #27374D; 
+  color: #FDA769; 
   text-align: center;
   justify-content: center;
   margin: 40px; 
   padding: 10px 0;
-  border-top: 4px solid #27374D;
+  border-top: 4px solid #526D82;
 }
 
 @media (min-width: 1060px){
@@ -361,6 +362,23 @@ hr {
 }
 
 #input{
-  background-color: #27374D;
+  background-color: #526D82;
   color: #BBBBBB;
+  border: #27374D;
 }
+
+.footer {
+  background-color: #27374D;
+  color: #FDA769;
+  width: 100%;
+}
+
+.footer div {
+  width: 100%;
+}
+
+#footer {
+  margin-top: 50px;
+}
+
+html{scroll-behavior:smooth}
