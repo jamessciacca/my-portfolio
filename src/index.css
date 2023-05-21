@@ -10,7 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: cornflowerblue;
+  background-color: #9DB2BF;
+  color: #27374D;
 }
 
 code {
@@ -18,7 +19,126 @@ code {
     monospace;
 }
 
-/* header styling */
 #header {
-  background-color: #585a58;
+  background-color: #27374D;
+  color: #FDA769;
+  font-family: monospace;
 }
+
+/* contact button styling */
+#contactBtn {
+  border-radius: 50%;
+  transition: 0.2s;
+  transition-property:transform;
+  padding: 10px 15px;
+  border: 1px solid #FDA769;
+  color: #000000;
+  background-color: #FDA769;
+  font-size: 1.0em;
+  border-radius: 5px;
+  transform: scale(1.0);
+  &:hover {
+    transform: scale(4);
+    border-color: #000000;
+  }
+}
+
+/* name styling */
+
+#name {
+  position: relative;
+  /* outline: 2px solid red; */
+  width: max-content;
+  color: #FDA769;
+}
+
+#name::before,
+#name::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#name::before {
+  background-color: #9DB2BF;
+  animation: 
+    typewriter 5s steps(13) 1s forwards;
+}
+
+#name::after {
+  width: 0.10em;
+  background-color: #526D82;
+  animation: typewriter 5s steps(13) 1s forwards, 
+    blink 500ms steps(13) infinite alternate;
+}
+
+@keyframes typewriter{
+  to {
+     left: 100%; 
+    }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+} 
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#intro {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
+}
+
+#fullStack, #bio, #contactBtn, #header{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 6.5s;
+}
+
+@media (max-width: 820px) {
+#name::before,
+#name::after,
+#intro,
+#fullStack,
+#bio,
+#contactBtn {
+    animation: none;
+    opacity: 1;
+}
+}
+
+@media (max-width: 820px) {
+  #name::before,
+  #name::after {
+    display: none;
+  }
+  #name {
+    max-width: fit-content;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 4.5em;
+  }
+  #bio {
+    max-width: fit-content;
+  }
+}
+
+@media (min-width: 821px) {
+  #bio {
+    max-width: 50%;
+  }
+}
+
+@media ()
