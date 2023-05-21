@@ -18,8 +18,6 @@ function Landing() {
                 <button id='contactBtn' className="font-mono py-2 px-4 rounded mt-3">Contact Me</button>
             </div>
         </section>
-
-        <hr className="mt-5"/>
         </>
     );
 }
