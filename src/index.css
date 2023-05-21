@@ -26,13 +26,13 @@ code {
 }
 
 /* contact button styling */
-#contactBtn {
+#contactBtn, #emailSubmit {
   background-color: #FDA769;
   color: #27374D;
   border: #27374D 3px solid;
 }
 
-#contactBtn:hover {
+#contactBtn:hover, #emailSubmit:hover{
   border: 3px solid #FDA769;
   background-color: #526D82;
   color: white;
@@ -106,7 +106,7 @@ code {
   animation: fadeInDown 2s ease forwards;
 }
 
-#fullStack, #bio, #contactBtn, #header, #projectSection, #socials{
+#fullStack, #bio, #contactBtn, #header, #projectSection, #socials, #contactForm{
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 2s ease forwards;
@@ -133,7 +133,8 @@ code {
 #header,
 #memoji,
 #projectSection,
-#socials{
+#socials,
+#contactForm{
     animation: none;
     opacity: 1;
 }
@@ -231,11 +232,6 @@ code {
   
 }
 
-/* just while working  */
- #projectSection {
-  margin-bottom:  500px;
-}
-
 /* project cards */
 #project{
   background-color: #27374D;
@@ -270,6 +266,9 @@ hr {
   color: #FDA769;
 }
 
+#projectSection{
+  margin-bottom: 50px;
+}
 .modal {
   position: fixed;
   left: 0;
@@ -330,13 +329,38 @@ hr {
   font-size: 48px;
   color: #27374D; 
   text-align: center;
+  justify-content: center;
   margin: 40px; 
   padding: 10px 0;
+  box-sizing: border-box;
   border-top: 4px solid #27374D; 
-  border-bottom: 4px solid #27374D; 
+  border-bottom: 4px solid #27374D;
+}
+
+#contacth1{
+  font-family: monospace;
+  font-size: 48px;
+  color: #27374D; 
+  text-align: center;
+  justify-content: center;
+  margin: 40px; 
+  padding: 10px 0;
+  border-top: 4px solid #27374D;
+}
+
+@media (min-width: 1060px){
+  #contactDiv{
+    display: flex;
+    padding-left: 20px;
+  }
 }
 
 #socials img{
   width: 40px;
   height: 40px;
+}
+
+#input{
+  background-color: #27374D;
+  color: #BBBBBB;
 }

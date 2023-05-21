@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -17,6 +18,7 @@ function App() {
       <Landing />
       <Skills />
       <Projects />
+      <Contact />
       {/* <About /> */}
       {/* <Footer /> */}
     </>
