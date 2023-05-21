@@ -60,13 +60,13 @@ code {
 #name::before {
   background-color: #9DB2BF;
   animation: 
-    typewriter 4s steps(13) 1s forwards;
+    typewriter 3s steps(13) 1s forwards;
 }
 
 #name::after {
   width: 0.10em;
   background-color: #526D82;
-  animation: typewriter 4s steps(13) 1s forwards, 
+  animation: typewriter 3s steps(13) 1s forwards, 
     blink 500ms steps(13) infinite alternate;
 }
 
@@ -91,17 +91,25 @@ code {
   }
 }
 
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(-1);
+    animation-iteration-count: 1;
+  }
+}
+
 #intro {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 2s ease forwards;
+  animation: fadeInDown 2s ease forwards;
 }
 
-#fullStack, #bio, #contactBtn, #header, #projectSection{
+#fullStack, #bio, #contactBtn, #header, #projectSection, #socials{
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 2s ease forwards;
-  animation-delay: 5.25s;
+  animation-delay: 4s;
 }
 
 @media (min-width: 200px){
@@ -109,8 +117,8 @@ code {
   #memoji{
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 4s ease forwards;
-    animation-delay: 5.25s;
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 4s;
   }
 }
 
@@ -123,7 +131,8 @@ code {
 #contactBtn,
 #header,
 #memoji,
-#projectSection{
+#projectSection,
+#socials{
     animation: none;
     opacity: 1;
 }
@@ -324,4 +333,9 @@ hr {
   padding: 10px 0;
   border-top: 4px solid #27374D; 
   border-bottom: 4px solid #27374D; 
+}
+
+#socials img{
+  width: 40px;
+  height: 40px;
 }

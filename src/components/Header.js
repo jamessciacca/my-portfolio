@@ -13,10 +13,10 @@ function Header() {
             <img id='logo' src={logo} alt="JRS Logo" />
             {/* Nav Items */}
             <ul id='navLinks' className="flex items-center">
+                <li className="nav-link nav-link-ltr"><a href="">Skills</a></li>
                 <li className="nav-link nav-link-ltr"><a href="">Projects</a></li>
                 <li className="nav-link nav-link-ltr"><a href="">Contact</a></li>
                 <li className="nav-link nav-link-ltr"><a href="">Resume</a></li>
-
             </ul>
         </div>
         </section>
