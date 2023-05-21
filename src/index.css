@@ -36,6 +36,7 @@ code {
   border: 3px solid #FDA769;
   background-color: #526D82;
   color: white;
+  cursor: pointer;
 }
 
 /* name styling */
