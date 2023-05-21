@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #9DB2BF;
   color: #27374D;
+  width: 100%;
 }
 
 code {
@@ -382,3 +383,4 @@ hr {
 }
 
 html{scroll-behavior:smooth}
+
