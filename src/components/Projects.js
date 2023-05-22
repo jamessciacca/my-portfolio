@@ -17,9 +17,9 @@ function Projects() {
 
     return (
         <>
-            <section id='projectSection' className='container mx-auto'>
+            <section id='projectSection' className='container mx-auto text-xl sm:text-lg md:text-md lg:text-sm xl:text-xs'>
                 <h1 id='projectsh1' className='text-center mb-7'>PROJECTS</h1>
-                <div className='container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4'>
+                <div className=' mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4'>
                     <div id='project' className='text-center text-lg'>
                         <h1 className='mb-3'>Dev Direct</h1>
                         {showProject1 ?
@@ -34,7 +34,6 @@ function Projects() {
                             </a>
                             <a href="https://dev-direct.herokuapp.com/" target='_blank' class="text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out">Live Site</a>
                         </ul>
-                        <p></p>
                         <div >
                         </div>
                     </div>
