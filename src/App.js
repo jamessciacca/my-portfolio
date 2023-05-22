@@ -10,7 +10,6 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 
 function App() {
-  const [show, setShow] = useState(false);
 
   return (
     <>
