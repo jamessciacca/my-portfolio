@@ -10,7 +10,7 @@ import linkedinlogo from "../img/linkedin.png";
 function Landing() {
     return(
         <>
-        <section>
+        <section id="landing">
             <div className="max-w-screen-xl p-10 mx-auto">
                 <h5 id='intro' className="font-mono text-lg">Hello, my name is</h5>
                 <img id='memoji' className='w-1/6 justify-end' src={memoji} alt="Memoji Profile Picture" />

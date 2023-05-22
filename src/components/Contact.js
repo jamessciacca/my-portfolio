@@ -32,13 +32,14 @@ function Contact() {
 
     return (
         <>
+        <hr />
             <section id='contactForm'>
-                <div id='contactDiv' className="container text-center">
-                    <h1 id='contacth1' className="">Contact Me</h1>
-                    <form id='emailForm' className="flex flex-col w-2/3 mx-auto items-center justify-center" ref={form} onSubmit={sendEmail} action="">
+                <div id='contactDiv' className="flex flex-grow justify-center text-center mx-auto w-auto">
+                    <form id='emailForm' className="flex flex-col mx-auto items-center justify-center w-2/4" ref={form} onSubmit={sendEmail} action="">
                     {showMessage ? 
                         <h1 className="text-center text-2xl font-bold text-green-400 mb-5">Message Sent!</h1>
                         : null}
+                        <h1 id='contacth1' className='mb-5'>Contact Me</h1>
                         <input id='input' type="text" placeholder='Full Name' name='user_name' className="px-4 py-2 my-2 bg-gray-200 rounded-lg shadow-md w-full" required/>
                         <input id='input' type="email" placeholder='Email' name='user_email' className="px-4 py-2 my-2 bg-gray-200 rounded-lg shadow-md w-full" required/>
                         <input id='input'  type="text" placeholder='Subject' name='user_subject' className="px-4 py-2 my-2 mb-4 bg-gray-200 rounded-lg shadow-md w-full"required/>
