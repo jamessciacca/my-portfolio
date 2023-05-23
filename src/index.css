@@ -479,7 +479,7 @@ html{scroll-behavior:smooth}
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   #skillsSection {
     grid-template-columns: 1fr 1fr;
   }
@@ -494,9 +494,6 @@ html{scroll-behavior:smooth}
   }
   #headerlogo, #footerlogo{
     display: none;
-  }
-  #footer{
-
   }
   #navLinks{
     display: block;
