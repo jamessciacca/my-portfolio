@@ -465,6 +465,13 @@ html{scroll-behavior:smooth}
 #skillsSection{
   margin-bottom: 50px
 }
+@media (min-width: 1537px){
+  #skillsSection{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
 
 @media (max-width: 1536px) {
   #skillsSection {
