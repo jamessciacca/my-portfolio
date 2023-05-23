@@ -8,6 +8,7 @@ import linkedinlogo from "../img/linkedin.png";
 
 //creating landing function
 function Landing() {
+
     return(
         <>
         <section id="landing">
