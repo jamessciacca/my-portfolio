@@ -354,6 +354,8 @@ hr {
   background-color: #526D82;
   color: #BBBBBB;
   border: #27374D;
+  font-family: monospace;
+  font-size: large;
 }
 
 .footer {
