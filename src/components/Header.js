@@ -10,7 +10,7 @@ function Header() {
     return (
         <>
         <section id="header" className="p-4">
-        <div className="flex justify-center  items-center">
+        <div className="flex justify-between items-center">
             {/* Logo Image and Text */}
             <img id='headerlogo' src={logo} alt="JRS Logo" />
             {/* Nav Items */}
