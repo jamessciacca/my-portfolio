@@ -10,7 +10,7 @@ function Footer() {
           <div className="flex justify-center justify-between items-center">
             {/* Logo Image and Text */}
             <h1 id="footerh1">Copyright © 2023 James Sciacca. All Rights Reserved.</h1>
-            <img id='logo' src={logo} alt="JRS Logo" />
+            <img id='footerlogo' src={logo} alt="JRS Logo" />
             {/* Nav Items */}
             <ul id='navLinks' className="flex items-center">
                 <li className="nav-link nav-link-ltr"><a href="https://github.com/jamessciacca" target="_blank">Github</a></li>

@@ -3,20 +3,22 @@ import React from "react";
 //importing image
 import logo from "../img/logo.png";
 
+import Resume from "../pdf/Resume2023.pdf";
+
 //creating header function
 function Header() {
     return (
         <>
         <section id="header" className="p-4">
-        <div className="flex justify-center justify-between items-center">
+        <div className="flex justify-center  items-center">
             {/* Logo Image and Text */}
-            <img id='logo' src={logo} alt="JRS Logo" />
+            <img id='headerlogo' src={logo} alt="JRS Logo" />
             {/* Nav Items */}
-            <ul id='navLinks' className="flex items-center">
-                <li className="nav-link nav-link-ltr"><a href="">Skills</a></li>
+            <ul id='navLink' className="flex items-center">
+                <li className="nav-link nav-link-ltr"><a href="#skillsh1">Skills</a></li>
                 <li className="nav-link nav-link-ltr"><a href="#projectSection">Projects</a></li>
                 <li className="nav-link nav-link-ltr"><a href="#contactForm">Contact</a></li>
-                <li className="nav-link nav-link-ltr"><a href="">Resume</a></li>
+                <li className="nav-link nav-link-ltr"><a href={Resume} target="_blank">Resume</a></li>
             </ul>
         </div>
         </section>

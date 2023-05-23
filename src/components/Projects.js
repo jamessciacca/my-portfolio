@@ -32,7 +32,7 @@ function Projects() {
                             <p className='mb-8'>A full stack MERN app designed for developers to connect and network with other developes accross the world. <br /><br /> My responsibilities for the development process included working on the Back-end to set up the server, database, and create both the Authentication and Api routes! I also worked on the CSS and responsiveness of the app. <br /><br /> Developed with - HTML, CSS, REACT, Node.js, Express.js, MongoDB, Bcrypt, Sessions, TailWind, Axios, and jQuery </p>
                         }
                         <ul className='flex justify-evenly p-4'>
-                            {showProject1 ? '' : <a id='githubA' href="https://github.com/Animeet/DevDirect" target="_blank"><img id='githublogo' src={githublogo} alt="" /></a>}
+                            {showProject1 ? '' : <a href="https://github.com/Animeet/DevDirect" target='_blank' className='text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
                             <a id='description' className='text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'
                                 onClick={() => setProject1(!showProject1)}>
                                 {showProject1 ? 'Description' : 'Back'}
@@ -49,7 +49,7 @@ function Projects() {
                             <p className='mb-8'>A fun application designed to make fun of your furry best friends! Allows a user to create an account where they can upload links to photos and add a funny comment under it! <br /><br /> My responsibilities for this app include all of the CSS and Styling throughout the whole page, and helping out on the Back-end when my colleagues needed it. <br /><br /> Developed with - HandleBars, CSS, Node.js, Express.js, SQL, Bcrypt, Dotenv, Express-handlebars, Express-session, Express-validator, Generate-unique-id, Multer, Mysql2, Nodemon, Sequelize, and Uploader</p>
                         }
                         <ul className='flex justify-around p-4'>
-                            {showProject2 ? '' : <a id='githubA' href="https://github.com/MegMathis/Pet_Roasting_App" target="_blank"><img id='githublogo' src={githublogo} alt="" /></a>}
+                            {showProject2 ? '' : <a href="https://github.com/MegMathis/Pet_Roasting_App" target='_blank' className='text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
                             <a id='description' className='text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'
                                 onClick={() => setProject2(!showProject2)}>
                                 {showProject2 ? 'Description' : 'Back'}
@@ -64,7 +64,7 @@ function Projects() {
                             <p className='mb-8'>My First Project! We created a workout finder app based on users input. We used two API's to get both workout data and inspirational quote data! <br /><br /> My responsibilities for the development process included working on the API connection, and completing simple JS to make the app fucntional. <br /><br /> Developed with - HTML, CSS, JavaScript, jQuery, Tailwind, and NinjaAPI! </p>
                         }
                         <ul className='flex justify-around p-4'>
-                            {showProject3 ? '' : <a id='githubA' href="https://github.com/jamessciacca/fitness-fusion-workout-maker" target="_blank"><img id='githublogo' src={githublogo} alt="" /></a>}
+                            {showProject3 ? '' : <a href="https://github.com/jamessciacca/fitness-fusion-workout-maker" target='_blank' className='text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
                             <a id='description' className='text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'
                                 onClick={() => setProject3(!showProject3)}>
                                 {showProject3 ? 'Description' : 'Back'}

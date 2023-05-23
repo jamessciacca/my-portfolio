@@ -35,7 +35,7 @@ hr{
 
 #header {
   background-color: #27374D;
-  color: #FDA769;
+  color: #F97B22;
   font-family: monospace;
 }
 
@@ -230,7 +230,11 @@ hr{
   width: 100%;
 }
 
-#logo {
+#headerlogo {
+  height: 40px;
+}
+
+#footerlogo {
   height: 40px;
 }
 
@@ -355,7 +359,7 @@ hr {
 .footer {
   background-color: #27374D;
   color: #FDA769;
-  width: 100%;
+  width: 100%;;
 }
 
 .footer div {
@@ -392,9 +396,10 @@ html{scroll-behavior:smooth}
 
 #projecth1, #skillsh1{
   font-family: monospace;
-  color: #FDA769;
+  color: #27374D;
   margin-bottom: 25px;
-  text-decoration: solid underline;
+  text-decoration: none;
+  font-weight: bold;
   font-size: xx-large
 }
 
@@ -404,7 +409,8 @@ html{scroll-behavior:smooth}
   align-items: center;
   font-family: monospace;
   color: #FDA769;
-  text-decoration: solid underline;
+  text-decoration: none;
+  font-weight: bold;
   font-size: xx-large
 
 }
@@ -482,6 +488,36 @@ html{scroll-behavior:smooth}
   }
   #emailForm{
     width: 80%;
+  }
+  body{
+    width: 100%;
+  }
+  #headerlogo, #footerlogo{
+    display: none;
+  }
+  #footer{
+
+  }
+  #navLinks{
+    display: block;
+    justify-content: center;
+    margin: auto;
+  }
+  #header{
+    margin-top: 0px;
+  }
+  #intro{
+    margin-bottom: -20px;
+  }
+  #name{
+    margin-bottom: 15px;
+  }
+  #skillsh1{
+    margin-top: -20px;
+    margin-bottom: 30px;
+  }
+  #projecth1{
+    margin-bottom: -35px;
   }
 }
 
