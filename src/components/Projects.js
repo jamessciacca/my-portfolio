@@ -6,6 +6,9 @@ import { useState } from 'react';
 import devdirect from '../img/devdirect.png';
 import petroasting from '../img/petroasting.png';
 import fitnessfusion from '../img/fitnessfusion.png';
+import jrs from '../img/jrs.png';
+import sqlproject from '../img/sqlproject.png';
+import codequiz from '../img/codequiz.png';
 
 //importing github logo
 import githublogo from '../img/github-mark.png';
@@ -16,6 +19,9 @@ function Projects() {
     const [showProject1, setProject1] = useState(true);
     const [showProject2, setProject2] = useState(true);
     const [showProject3, setProject3] = useState(true);
+    const [showProject4, setProject4] = useState(true);
+    const [showProject5, setProject5] = useState(true);
+    const [showProject6, setProject6] = useState(true);
     
 
     return (
@@ -29,7 +35,7 @@ function Projects() {
                         <h1 className='mb-3'>Dev Direct</h1>
                         {showProject1 ?
                             <img className='mx-auto' src={devdirect} alt="devdirect logo" /> :
-                            <p className='mb-8'>A full stack MERN app designed for developers to connect and network with other developes accross the world. <br /><br /> My responsibilities for the development process included working on the Back-end to set up the server, database, and create both the Authentication and Api routes! I also worked on the CSS and responsiveness of the app. <br /><br /> Developed with - HTML, CSS, REACT, Node.js, Express.js, MongoDB, Bcrypt, Sessions, TailWind, Axios, and jQuery </p>
+                            <p className='mb-8'>A full stack MERN app designed for developers to connect and network with other developers across the world. <br /><br /> My responsibilities for the development process included working on the Back-end to set up the server, database, and create both the Authentication and Api routes! I also worked on the CSS and responsiveness of the app. <br /><br /> Developed with - HTML, CSS, REACT, Node.js, Express.js, MongoDB, Bcrypt, Sessions, TailWind, Axios, and jQuery </p>
                         }
                         <ul className='flex justify-evenly p-4'>
                             {showProject1 ? '' : <a href="https://github.com/Animeet/DevDirect" target='_blank' className='text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
@@ -71,6 +77,51 @@ function Projects() {
                             </a>
                             {showProject3 ? '' : <a href="https://jamessciacca.github.io/fitness-fusion-workout-maker/" target='_blank' class="text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out">Live Site</a>}
                             
+                        </ul>
+                    </div>
+                    <div id='project' className='text-center text-xl'>
+                        <h1 className='mb-3'>My Portfolio</h1>
+                        {showProject4 ?
+                            <img id='jrs' className='mx-auto' src={jrs} alt="jrs logo" /> :
+                            <p className='mb-8'>My first attempt at a Personal Web Portfolio! <br /><br /> I am very proud of the outcome so far and I am looking to add more features in the future. I am very happy to say I was able to make this application fully responsive across all devices! <br /><br /> Developed with - HTML, CSS, JavaScript, React, and Tailwind! </p>
+                        }
+                        <ul className='flex justify-center p-4'>
+                            {showProject4 ? '' : <a href="https://github.com/jamessciacca/my-portfolio" target='_blank' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
+                            <a id='description' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'
+                                onClick={() => setProject4(!showProject4)}>
+                                {showProject4 ? 'Description' : 'Back'}
+                            </a>
+                        </ul>
+                    </div>
+                    <div id='project' className='text-center text-xl'>
+                        <h1 className='mb-3'>SQL Employee Tracker</h1>
+                        {showProject5 ?
+                            <img className='mx-auto' src={sqlproject} alt="sql logo" /> :
+                            <p className='mb-8'>
+                            A command-line application built from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL. <br /><br /> <br /> Developed with - SQL, JavaScript, and Bash </p>
+                        }
+                        <ul className='flex justify-center p-4'>
+                            {showProject5 ? '' : <a href="https://github.com/jamessciacca/my-portfolio" target='_blank' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
+                            <a id='description' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'
+                                onClick={() => setProject5(!showProject5)}>
+                                {showProject5 ? 'Description' : 'Back'}
+                            </a>
+                        </ul>
+                    </div>
+                    <div id='project' className='text-center text-xl'>
+                        <h1 className='mb-3'>Coding Quiz</h1>
+                        {showProject6 ?
+                            <img className='mx-auto' src={codequiz} alt="cde quiz img" /> :
+                            <p className='mb-8'>
+                            An online DOM Quiz created using HTML, CSS, and JavaScript! Utilizes the users local storage to save their Initials and Score on the quiz! <br /><br /> This was my first JavaScript based project and I appreciate this project a lot because it humbled me and taught me that not everything will resonate immediately but with some persiverence you can get anything done! <br /><br /> Developed with - HTML, CSS, JavaScript, jQuery, and Utilizes Dev Tools in Browser. </p>
+                        }
+                        <ul className='flex justify-center p-4'>
+                            {showProject6 ? '' : <a href="https://github.com/jamessciacca/online-coding-quiz" target='_blank' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
+                            <a id='description' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'
+                                onClick={() => setProject6(!showProject6)}>
+                                {showProject6 ? 'Description' : 'Back'}
+                            </a>
+                            {showProject6 ? '' : <a href="https://jamessciacca.github.io/online-coding-quiz/" target='_blank' class="text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out">Live Site</a>}
                         </ul>
                     </div>
                 </div>
