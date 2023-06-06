@@ -57,7 +57,7 @@ function Skills() {
                         class="rounded-lg w-56 h-56 object-cover"
                         alt="placeholder image"
                     />
-                    <h3 class="text-2xl mb-3 text-gray-800 font-medium">React</h3>
+                    <h3 class="text-2xl mb-3 text-gray-800 font-medium">Node.js</h3>
                 </div>
                 <div id='card' class="mx-auto card w-full h-56 bg-gray-300 rounded-lg flex flex-col items-center justify-center">
                     <img
