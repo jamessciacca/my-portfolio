@@ -501,7 +501,7 @@ html{scroll-behavior:smooth}
   body{
     width: 100%;
   }
-  #headerlogo, #footerlogo{
+   #footerlogo{
     display: none;
   }
   #navLinks{
@@ -635,6 +635,25 @@ html{scroll-behavior:smooth}
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+  }
+}
+
+#card {
+  transition: all 0.15s ease-in-out;
+}
+
+#card:hover {
+  box-shadow: 0 0 10px 3px #FDA769;
+  transform: scale(1.05);
+}
+
+#socialLinks:hover {
+  transform: scale(1.1)
+}
+
+@media (max-width: 450px) {
+  #contactNav {
+    display: none;
   }
 }
 
