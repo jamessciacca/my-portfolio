@@ -6,7 +6,7 @@ import logo from "../img/logo.png";
 import Resume from "../pdf/Resume2023.pdf";
 
 //creating header function
-function Header() {
+function AboutHeader() {
     return (
         <>
         <section id="header" className="p-4">
@@ -17,9 +17,7 @@ function Header() {
             </a>
             {/* Nav Items */}
             <ul id='navLink' className="flex items-center">
-                <li className="nav-link nav-link-ltr"><a href="#skillsh1">Skills</a></li>
-                <li className="nav-link nav-link-ltr"><a href="#projectSection">Projects</a></li>
-                <li id='contactNav' className="nav-link nav-link-ltr"><a href="#contactForm">Contact</a></li>
+                <li className="nav-link nav-link-ltr"><a href='/'>Home</a></li>
                 <li className="nav-link nav-link-ltr"><a href={Resume} target="_blank">Resume</a></li>
             </ul>
         </div>
@@ -29,4 +27,4 @@ function Header() {
 }
 
 //exporting the header
-export default Header;
+export default AboutHeader;

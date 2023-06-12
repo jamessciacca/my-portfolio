@@ -1,6 +1,6 @@
 import React from "react";
 
-import Header from "./Header";
+import AboutHeader from "./AboutHeader";
 import Footer from "./Footer";
 
 import selfPortrait from "../img/portraitpic.jpeg";
@@ -9,7 +9,7 @@ import backgroundIMG from "../img/MoreAboutMe.png"
 function MoreAbout () {
     return (
         <>
-        <Header />
+        <AboutHeader />
         <div style={{ backgroundImage:`url(${backgroundIMG})`}} id='MoreAboutMe' className="flex flex-col p-5">
         <img className='mx-auto mt-10' id='selfPortrait' src={selfPortrait} alt="selfPortrait" />
         <br />
