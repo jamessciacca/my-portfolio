@@ -179,7 +179,7 @@ hr{
     max-width: fit-content;
   }
   #header{
-    margin-top: -20px;
+    margin-top: 0px;
   }
 }
 
@@ -530,4 +530,114 @@ html{scroll-behavior:smooth}
 #jrs{
   border: #FDA769 2px solid;
 }
+
+/* More about Me Page */
+#selfPortrait{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  box-shadow:  0 0 10px 1px #FDA769;
+}
+
+#moreH1 {
+  font-size: xx-large;
+  font-family: monospace;
+  color: #FDA769;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#MoreAboutMe h3, p {
+  font-family: monospace;
+  color: #27374D;
+}
+
+#MoreAboutMe p {
+  font-size: medium;
+}
+
+#MoreAboutMe h3 {
+  font-size: x-large;
+}
+
+#aboutDiv{
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow:  0 0 10px 5px #FDA769;
+}
+
+#aboutDiv, #aboutDiv h3 {
+  background-color: #27374D;
+  color: #FDA769;
+}
+
+#aboutDiv p {
+  color: #9DB2BF;
+}
+
+@media (max-width: 450px) {
+  #selfPortrait{
+    width: 300px;
+    height: 300px;
+  }
+  #aboutDiv {
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #aboutDiv h3 {
+    font-size: large;
+    font-weight: bolder;
+  }
+}
+
+@media (min-width: 1000px) {
+  #aboutDiv {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #aboutDiv h3 {
+    font-size: xx-large;
+  }
+  #aboutDiv p {
+    font-size: large;
+  }
+}
+
+@media (max-width: 1000px){
+  #aboutDiv {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #aboutDiv p {
+    font-size: 14px;
+  }
+  #selfPortrait{
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1500px){
+  #aboutDiv {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media (max-width: 400px) {
+  #aboutDiv {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+
+
 

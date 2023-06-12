@@ -12,10 +12,12 @@ function Header() {
         <section id="header" className="p-4">
         <div className="flex justify-between items-center">
             {/* Logo Image and Text */}
-            <img id='headerlogo' src={logo} alt="JRS Logo" />
+            <a href="/">
+                <img id='headerlogo' src={logo} alt="JRS Logo" />
+            </a>
             {/* Nav Items */}
             <ul id='navLink' className="flex items-center">
-                <li className="nav-link nav-link-ltr"><a href="#skillsh1">Skills</a></li>
+                <li className="nav-link nav-link-ltr"><a href="/#skillsh1">Skills</a></li>
                 <li className="nav-link nav-link-ltr"><a href="#projectSection">Projects</a></li>
                 <li className="nav-link nav-link-ltr"><a href="#contactForm">Contact</a></li>
                 <li className="nav-link nav-link-ltr"><a href={Resume} target="_blank">Resume</a></li>
