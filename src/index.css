@@ -630,11 +630,11 @@ html{scroll-behavior:smooth}
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 499px) {
   #aboutDiv {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 93%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
   }
 }
 
