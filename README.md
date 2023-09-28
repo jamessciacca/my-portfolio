@@ -4,7 +4,7 @@
 
 ## Description
 
-Welcome to the Github Page of my Personal Portfolio page. This project is the first version of my Personal Portfolio that I plan on updating or remaking every year throughout my College degree. Please feel free to checkout my site and leave feedback!
+Welcome to the Github Page of my Personal Portfolio. This project is the first version of my Personal Portfolio that I plan on updating or remaking every year throughout my College degree. Please feel free to checkout my site and leave feedback!
 
 ## License
 
