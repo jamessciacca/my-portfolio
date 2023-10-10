@@ -9,6 +9,7 @@ import fitnessfusion from '../img/fitnessfusion.png';
 import jrs from '../img/jrs.png';
 import sqlproject from '../img/sqlproject.png';
 import codequiz from '../img/codequiz.png';
+import JAT from '../img/JAT.jpg';
 
 //importing github logo
 import githublogo from '../img/github-mark.png';
@@ -22,6 +23,7 @@ function Projects() {
     const [showProject4, setProject4] = useState(true);
     const [showProject5, setProject5] = useState(true);
     const [showProject6, setProject6] = useState(true);
+    const [showProject7, setProject7] = useState(true);
     
 
     return (
@@ -31,6 +33,20 @@ function Projects() {
             <section id='projectSection' className='container mx-auto'>
                 <h1 id='projecth1' className='text-center text-xl'>PROJECTS</h1>
                 <div id='gridLayout' className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-xs md:text-sm lg:text-base xl:text-xl'>
+                <div id='project' className='text-center text-xl'>
+                        <h1 className='mb-3'>JAT (HACKRU)</h1>
+                        {showProject7 ?
+                            <img className='mx-auto' src={JAT} alt="cde quiz img" /> :
+                            <p className='mb-8'>
+                            This app was created in only 24 hours at HackRU23. Me and my team worked hard to come up with a working application and we are super proud of what we achieved. Only 1 out of our 4 group members have been to a Hackathon before! This was a great learning experience and way to practice our development skills! <br /><br /> JAT tracks jobs you have applied to. Save the stages you are at in each application and get the total count. Set goals for yourself (apply to 5 jobs/day) and keep your streak. Find jobs and apply on the website. We built JAT using the MERN (MongoDB, Express, React, Node) stack. Also, we used Auth0 for authentication. <br /><br /> Developed with - MongoDB, Express.js, React.js, Node.js, TailwindCSS, AuthO</p>
+                        }
+                        <ul className='flex justify-center p-4'>
+                            {showProject7 ? '' : <a href="https://github.com/justbautista/jat" target='_blank' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'><li>Github</li></a>}
+                            <a id='description' className='text-white mr-3 font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out'
+                                onClick={() => setProject7(!showProject7)}>
+                                {showProject7 ? 'Description' : 'Back'}</a>
+                        </ul>
+                    </div>
                     <div id='project' className='text-center text-xl'>
                         <h1 className='mb-3'>Dev Direct</h1>
                         {showProject1 ?
@@ -46,8 +62,11 @@ function Projects() {
                             {showProject1 ? '' : <a href="https://dev-direct.herokuapp.com/" target='_blank' class="text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-4 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out">Live</a>}
                         </ul>
                         <div >
+                            
                         </div>
                     </div>
+
+
                     <div id='project' className='text-center text-xl'>
                         <h1 className='mb-3'>Pet Roasting App</h1>
                         {showProject2 ?

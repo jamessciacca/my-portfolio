@@ -17,7 +17,7 @@ function Footer() {
                     <ul id='navLinks' className="flex items-center">
                         <li className="nav-link nav-link-ltr"><a href="https://github.com/jamessciacca" target="_blank">Github</a></li>
                         <li className="nav-link nav-link-ltr"><a href="https://www.linkedin.com/in/james-sciacca3/" target="_blank">LinkedIn</a></li>
-                        <li className="nav-link nav-link-ltr"><a href={Resume}>Resume</a></li>
+                        {/* <li className="nav-link nav-link-ltr"><a href={Resume}>Resume</a></li> */}
                     </ul>
                 </div>
             </footer>
