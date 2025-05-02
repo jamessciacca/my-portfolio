@@ -3,7 +3,7 @@ import React from "react";
 //importing image
 import logo from "../img/logo.png";
 
-import Resume from "../pdf/Resume2023.pdf";
+import Resume from "../pdf/ResumeSoftwareDev.pdf";
 
 //creating header function
 function AboutHeader() {
