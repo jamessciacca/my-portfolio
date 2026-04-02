@@ -2,8 +2,6 @@
 import React from "react";
 import logo from "../img/logo.png";
 
-import Resume from "../pdf/Resume2023.pdf";
-
 //creating footer function
 function Footer() {
     return (

@@ -1,23 +1,28 @@
 import Footer from "./Footer";
-import Header from "./Header";
 import Landing from "./Landing";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Contact from "./Contact";
+import ExploreGrid from "./ExploreGrid";
 import Certificates from "./Certificates";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
-function Home() {
+function Home({ singlePage = false }) {
     return (
         <>
-        <Header />
-        <Landing />
-        <Certificates />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
+            <Landing />
+            {singlePage ? (
+                <>
+                    <Certificates />
+                    <Skills />
+                    <Projects />
+                    <Contact />
+                    <Footer />
+                </>
+            ) : (
+                <ExploreGrid />
+            )}
         </>
     );
-    }
+}
 
 export default Home;
