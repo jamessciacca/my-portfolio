@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-//importing memoji image
+//importing landing image
 import memoji from "../img/memoji.png";
 import githublogo from "../img/github-mark.png";
 import linkedinlogo from "../img/linkedin.png";

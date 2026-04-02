@@ -30,6 +30,8 @@ const certificates = [
 function Certificates() {
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+    const earnedCount = certificates.filter((certificate) => !certificate.year.toLowerCase().includes('expected')).length;
+    const inProgressCount = certificates.length - earnedCount;
 
     useEffect(() => {
         const section = sectionRef.current;
@@ -59,13 +61,33 @@ function Certificates() {
         <>
             <section id="certificates" ref={sectionRef} className="px-6 py-10 md:px-10">
                 <div className="mx-auto max-w-screen-xl">
-                    <div className="certificate-heading">
-                        <p className="certificate-kicker">Professional Growth</p>
-                        <h1 className="font-mono text-4xl md:text-5xl">Certificates</h1>
-                        <p className="certificate-intro font-mono">
-                            Training milestones that helped sharpen my technical depth and real-world
-                            problem solving.
-                        </p>
+                    <div className="certificate-hero">
+                        <div className="certificate-heading certificate-heading-card">
+                            <p className="certificate-kicker">Professional Growth</p>
+                            <h1 className="font-mono text-4xl md:text-5xl">Certificates</h1>
+                            <p className="certificate-intro font-mono">
+                                Training milestones that helped sharpen my technical depth, practical troubleshooting,
+                                and real-world problem solving.
+                            </p>
+                        </div>
+
+                        <aside className="certificate-summary-card">
+                            <p className="certificate-summary-label">Certification Snapshot</p>
+                            <div className="certificate-summary-stats">
+                                <div className="certificate-summary-pill">
+                                    <strong>{earnedCount}</strong>
+                                    <span>Completed</span>
+                                </div>
+                                <div className="certificate-summary-pill">
+                                    <strong>{inProgressCount}</strong>
+                                    <span>In Progress</span>
+                                </div>
+                            </div>
+                            <p className="certificate-summary-copy">
+                                A mix of completed training and near-term goals focused on IT fundamentals, networking,
+                                and system-level confidence.
+                            </p>
+                        </aside>
                     </div>
 
                     <div className={`certificate-grid ${isVisible ? 'is-visible' : ''}`}>
