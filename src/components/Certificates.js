@@ -57,7 +57,6 @@ function Certificates() {
 
     return (
         <>
-            <hr />
             <section id="certificates" ref={sectionRef} className="px-6 py-10 md:px-10">
                 <div className="mx-auto max-w-screen-xl">
                     <div className="certificate-heading">

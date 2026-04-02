@@ -6,7 +6,7 @@ const aboutSections = [
     {
         title: "Current Academic Plans",
         content:
-            "I recently graduated from Rutgers University – New Brunswick with a degree in Computer Science. Throughout my time there, I built a strong foundation in problem-solving, systems, and development, while also realizing that I’m most energized when working with people and real-world applications of technology.",
+            "I recently graduated from Rutgers University – New Brunswick with a degree in Computer Science. During my time there, I built a strong foundation in problem-solving and systems. Outside of school, I’m always working toward IT certifications and continuing to grow my knowledge in the field.",
     },
     {
         title: "Personal Activities",

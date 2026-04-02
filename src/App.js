@@ -54,11 +54,11 @@ function App() {
         />
         <Route
           path='/skills'
-          element={isMobile ? <Navigate to="/#skillsh1" replace /> : <Skills />}
+          element={<Skills />}
         />
         <Route
           path='/projects'
-          element={isMobile ? <Navigate to="/#projectSection" replace /> : <Projects />}
+          element={<Projects />}
         />
         <Route
           path='/contact'

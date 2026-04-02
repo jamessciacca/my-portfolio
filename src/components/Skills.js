@@ -43,9 +43,14 @@ const skillGroups = [
 function Skills() {
     return (
         <>
-            <hr />
-            <h1 id='skillsh1' className='text-center'>Skills</h1>
-            <section className='mx-auto max-w-screen-xl px-6 pb-8 md:px-10'>
+            <section id="skillsSection" className='mx-auto max-w-screen-xl px-6 pb-8 md:px-10'>
+                <div className="section-heading section-heading-compact">
+                    <p className="section-kicker">What I Work With</p>
+                    <h1 id='skillsh1' className='section-title'>Skills</h1>
+                    <p className="section-intro">
+                        A mix of technical foundations, tools, and day-to-day technologies I use across projects.
+                    </p>
+                </div>
                 <h2 className="skills-subtitle">Core Technologies</h2>
                 <div className="skills-logo-grid">
                     {technologySkills.map((skill, index) => (

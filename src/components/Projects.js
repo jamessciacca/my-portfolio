@@ -21,7 +21,6 @@ const resumeProjects = [
             "Created a clean and responsive design using React and basic front-end tools.",
             "Used GitHub to manage updates and keep the project organized.",
         ],
-        links: [{ label: "Live Site", href: "https://jamessciacca.com/" }],
     },
     {
         source: "Resume",
@@ -147,13 +146,17 @@ function Projects() {
 
     return (
         <>
-            <hr />
             <section id="projectSection" className="container mx-auto px-6 pb-10 md:px-10">
-                <h1 id="projecth1" className="text-center text-xl">PROJECTS</h1>
+                <div className="section-heading section-heading-compact">
+                    <p className="section-kicker">Selected Work</p>
+                    <h1 id="projecth1" className="section-title">Projects</h1>
+                    <p className="section-intro">
+                        A combination of portfolio builds, coursework, and hands-on technical labs.
+                    </p>
+                </div>
                 <div className="project-grid">
                     {allProjects.map((project, index) => (
                         <article key={project.title} className="project-tile" style={{ "--stagger": index % 6 }}>
-                            <p className="project-badge">{project.source}</p>
                             <div className="project-preview-box">
                                 {project.image ? (
                                     <img className="project-preview" src={project.image} alt={`${project.title} preview`} />

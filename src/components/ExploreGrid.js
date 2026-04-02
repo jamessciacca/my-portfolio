@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const exploreItems = [
+const defaultExploreItems = [
     {
         title: 'Certificates',
         description: 'Professional credentials and completed programs.',
@@ -40,20 +40,27 @@ const exploreItems = [
     },
 ];
 
-function ExploreGrid() {
+function ExploreGrid({
+    items = defaultExploreItems,
+    sectionId = "explore",
+    title = "Explore My Work",
+    kicker = "Quick Navigation",
+    intro = "Pick any section below to jump straight to what you want to see.",
+    compact = false,
+}) {
     return (
-        <section id="explore" className="px-6 pb-8 md:px-10">
+        <section id={sectionId} className={`px-6 pb-8 md:px-10 ${compact ? "explore-compact" : ""}`}>
             <div className="mx-auto max-w-screen-xl">
                 <div className="explore-heading">
-                    <p className="explore-kicker">Quick Navigation</p>
-                    <h2 className="font-mono text-3xl md:text-4xl">Explore My Work</h2>
+                    <p className="explore-kicker">{kicker}</p>
+                    <h2 className="font-mono text-3xl md:text-4xl">{title}</h2>
                     <p className="explore-intro font-mono">
-                        Pick any section below to jump straight to what you want to see.
+                        {intro}
                     </p>
                 </div>
 
                 <div className="explore-grid">
-                    {exploreItems.map((item, index) => (
+                    {items.map((item, index) => (
                         <Link
                             key={item.title}
                             to={item.href}

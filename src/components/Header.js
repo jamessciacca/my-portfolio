@@ -10,6 +10,7 @@ function Header({ isMobile = false }) {
     const isHomePage = location.pathname === "/";
     const [menuOpen, setMenuOpen] = React.useState(false);
     const isActive = (path) => location.pathname === path;
+    const isHashActive = (hash) => location.pathname === "/" && location.hash === hash;
 
     React.useEffect(() => {
         setMenuOpen(false);
@@ -26,18 +27,20 @@ function Header({ isMobile = false }) {
                 <img id='headerlogo' src={logo} alt="JRS Logo" />
             </Link>
             {isMobile ? (
-                <button
-                    className={`hamburger-btn ${menuOpen ? "is-open" : ""}`}
-                    type="button"
-                    onClick={toggleMenu}
-                    aria-expanded={menuOpen}
-                    aria-controls="mobileMenu"
-                    aria-label="Toggle navigation menu"
-                >
-                    <span />
-                    <span />
-                    <span />
-                </button>
+                <>
+                    <button
+                        className={`hamburger-btn ${menuOpen ? "is-open" : ""}`}
+                        type="button"
+                        onClick={toggleMenu}
+                        aria-expanded={menuOpen}
+                        aria-controls="mobileMenu"
+                        aria-label="Toggle navigation menu"
+                    >
+                        <span />
+                        <span />
+                        <span />
+                    </button>
+                </>
             ) : (
                 <ul id='navLink' className="flex items-center">
                     <li className={`nav-link nav-link-ltr ${isActive("/") ? "active-nav" : ""}`}><Link to="/">Home</Link></li>
@@ -53,12 +56,13 @@ function Header({ isMobile = false }) {
         {isMobile && menuOpen ? (
             <div id="mobileMenu" className="mobile-menu">
                 <ul className="mobile-menu-list">
-                    <li><a href="/#certificates">Certificates</a></li>
-                    <li><a href="/#skillsh1">Skills</a></li>
-                    <li><a href="/#projectSection">Projects</a></li>
-                    <li><a href="/#contactForm">Contact</a></li>
-                    <li><Link to="/resume">Resume</Link></li>
-                    <li><Link to="/MoreAboutMe">About Me</Link></li>
+                    <li><Link className={isActive("/") && !location.hash ? "mobile-menu-link-active" : ""} to="/">Home</Link></li>
+                    <li><Link className={isHashActive("#certificates") ? "mobile-menu-link-active" : ""} to="/#certificates">Certificates</Link></li>
+                    <li><Link className={isActive("/projects") ? "mobile-menu-link-active" : ""} to="/projects">Projects</Link></li>
+                    <li><Link className={isActive("/skills") ? "mobile-menu-link-active" : ""} to="/skills">Skills</Link></li>
+                    <li><Link className={isActive("/MoreAboutMe") ? "mobile-menu-link-active" : ""} to="/MoreAboutMe">About Me</Link></li>
+                    <li><Link className={isHashActive("#contactForm") ? "mobile-menu-link-active" : ""} to="/#contactForm">Contact</Link></li>
+                    <li><Link className={isActive("/resume") ? "mobile-menu-link-active" : ""} to="/resume">Resume</Link></li>
                 </ul>
             </div>
         ) : null}
