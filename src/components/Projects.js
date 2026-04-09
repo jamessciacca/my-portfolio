@@ -8,8 +8,25 @@ import JAT from "../img/JAT.jpg";
 import memoji from "../img/memoji.png";
 import linuxduck from "../img/linuxduck.jpeg";
 import systemTroubleshootingImg from "../img/system-troubleshooting.jpg";
+import jamaLogo from "../img/jama-logo.png";
 
 const resumeProjects = [
+    {
+        source: "Resume",
+        title: "JAMA",
+        date: "April 2026",
+        stack: "React (Vite), JavaScript, CSS, Node.js, Express, CORS, GitHub Pages, Render",
+        image: jamaLogo,
+        points: [
+            "Built a full-stack monitoring dashboard to check website availability, HTTP status, and response times in a clean interface.",
+            "Connected a React frontend to an Express API that performs live health checks and returns real-time latency data.",
+            "Deployed the frontend on GitHub Pages and the backend on Render to demonstrate end-to-end delivery across platforms.",
+        ],
+        links: [
+            { label: "GitHub", href: "https://github.com/jamessciacca/JAMA" },
+            { label: "Live", href: "https://jamessciacca.github.io/JAMA/" },
+        ],
+    },
     {
         source: "Resume",
         title: "jamessciacca.com",
