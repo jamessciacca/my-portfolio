@@ -587,6 +587,42 @@ hr {
   width: 100%;
 }
 
+.footer-inner {
+  gap: 16px;
+}
+
+.footer-social-links {
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-links li {
+  list-style: none;
+}
+
+.footer-social-links a {
+  align-items: center;
+  background-color: rgba(39, 55, 77, 0.86);
+  border: 1px solid rgba(187, 187, 187, 0.35);
+  border-radius: 12px;
+  display: inline-flex;
+  justify-content: center;
+  padding: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-social-links a:hover {
+  border-color: rgba(187, 187, 187, 0.75);
+  box-shadow: 0 8px 16px rgba(39, 55, 77, 0.24);
+  transform: translateY(-2px);
+}
+
+.footer-social-links img {
+  height: 24px;
+  width: 24px;
+}
+
 #footer {
   margin-top: 50px;
 }
@@ -1143,7 +1179,7 @@ html{scroll-behavior:smooth}
   position: relative;
 }
 
-#certificates .max-w-screen-xl {
+#certificates .certificate-shell {
   background:
     radial-gradient(circle at 15% 10%, rgba(187, 187, 187, 0.3), transparent 42%),
     radial-gradient(circle at 85% 90%, rgba(39, 55, 77, 0.45), transparent 38%),
@@ -1417,7 +1453,7 @@ html{scroll-behavior:smooth}
 }
 
 @media (max-width: 639px) {
-  #certificates .max-w-screen-xl {
+  #certificates .certificate-shell {
     padding: 20px;
   }
 
@@ -2403,6 +2439,27 @@ html{scroll-behavior:smooth}
   .project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .project-preview-box {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    width: 100%;
+  }
+
+  .project-title {
+    font-size: 1.32rem;
+  }
+
+  .project-date,
+  .project-stack,
+  .project-links a {
+    font-size: 13px;
+  }
+
+  .project-points li {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2465,7 +2522,7 @@ html{scroll-behavior:smooth}
 
 #header,
 .landing-shell,
-#certificates .max-w-screen-xl,
+#certificates .certificate-shell,
 .moreabout-shell,
 .resume-shell,
 .explore-card,
@@ -2487,7 +2544,7 @@ html{scroll-behavior:smooth}
 
 #header::before,
 .landing-shell::before,
-#certificates .max-w-screen-xl::before,
+#certificates .certificate-shell::before,
 .moreabout-shell::before,
 .resume-shell::before,
 .explore-card::before,
@@ -2608,7 +2665,7 @@ hr {
 }
 
 .landing-shell,
-#certificates .max-w-screen-xl,
+#certificates .certificate-shell,
 .resume-shell,
 .moreabout-shell,
 #mobileExplore .max-w-screen-xl,
@@ -3068,7 +3125,7 @@ hr {
     color: #27374D;
   }
 
-  #certificates .max-w-screen-xl,
+  #certificates .certificate-shell,
   #mobileExplore .max-w-screen-xl {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -3335,7 +3392,7 @@ hr {
   }
 
   .landing-shell,
-  #certificates .max-w-screen-xl,
+  #certificates .certificate-shell,
   .resume-shell,
   .moreabout-shell,
   .contact-form-card,

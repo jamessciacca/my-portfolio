@@ -59,8 +59,8 @@ function Certificates() {
 
     return (
         <>
-            <section id="certificates" ref={sectionRef} className="px-6 py-10 md:px-10">
-                <div className="mx-auto max-w-screen-xl">
+            <section id="certificates" ref={sectionRef} className="container mx-auto px-6 py-10 md:px-10">
+                <div className="certificate-shell">
                     <div className="certificate-hero">
                         <div className="certificate-heading certificate-heading-card">
                             <p className="certificate-kicker">Professional Growth</p>

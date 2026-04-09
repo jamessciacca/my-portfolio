@@ -10,6 +10,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ResumePage from './components/ResumePage';
+import Footer from './components/Footer';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -68,6 +69,7 @@ function App() {
         <Route path='/MoreAboutMe' element={<MoreAbout />} />
         <Route path='*' element={<Navigate to="/" replace />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

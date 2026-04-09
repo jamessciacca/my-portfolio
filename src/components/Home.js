@@ -1,4 +1,3 @@
-import Footer from "./Footer";
 import Landing from "./Landing";
 import ExploreGrid from "./ExploreGrid";
 import Certificates from "./Certificates";
@@ -41,7 +40,6 @@ function Home({ singlePage = false }) {
                         intro="Click here to learn more about me and what I can do!"
                     />
                     <Contact />
-                    <Footer />
                 </>
             ) : (
                 <ExploreGrid />
