@@ -18,11 +18,15 @@ function Landing({ isMobile = false }) {
                 <div className="landing-copy">
                     <h5 id='intro' className="font-mono text-lg">Hello, my name is</h5>
                     <h1 id='name' className="font-mono">James Sciacca</h1>
-                    <h1 id='fullStack' className="font-mono">Rutgers Alumni</h1>
+                    <h1 id='fullStack' className="font-mono">Field Analyst @RWJBH|Rutgers Alumni</h1>
                     <p id='bio' className="font-mono mb-2">{introText}</p>
                 </div>
                 <div className={`landing-visual ${isMobile ? "landing-visual-hidden" : ""}`}>
                     <img id='memoji' src={memoji} alt="Memoji profile" />
+                    <div className="availability-badge" aria-label="Open to networking and opportunities">
+                        <span className="availability-dot" aria-hidden="true" />
+                        <span>Open to networking & opportunities</span>
+                    </div>
                 </div>
                 <ul id='socials' className="flex items-center mt-5">
                     <li className="landing-cta-item"><a href="#contactForm" id='contactBtn' className="landing-cta-btn text-white font-semibold bg-primary hover:bg-primarytrans hover:text-indigo-600 rounded py-2 px-2 border-2 focus:outline-none focus:border-teal-500 transition duration-150 ease-in-out">Contact Me</a></li>

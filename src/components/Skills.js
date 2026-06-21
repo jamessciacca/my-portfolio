@@ -10,6 +10,8 @@ import tailwindlogo from "../img/tailwindlogo.png";
 import javalogo from "../img/javalogo.png";
 import terminallogo from "../img/terminallogo.png";
 import githublogo from "../img/github-mark.png";
+import activeDirectoryLogo from "../img/ActiveDirectoryLogo.png";
+import serviceNowLogo from "../img/servicenowlogo.png";
 
 const technologySkills = [
     { name: "HTML", logo: htmllogo },
@@ -22,16 +24,32 @@ const technologySkills = [
     { name: "MongoDB", logo: mongodblogo },
     { name: "Command Line", logo: terminallogo },
     { name: "Git", logo: githublogo },
+    { name: "ServiceNow", logo: serviceNowLogo },
+    { name: "Active Directory", logo: activeDirectoryLogo },
 ];
 
 const skillGroups = [
     {
         title: "IT & Technical",
-        items: ["Troubleshooting", "Networking fundamentals", "Windows/Linux", "System setup"],
+        items: [
+            "Troubleshooting",
+            "Computer Repair",
+            "Networking Fundamentals",
+            "Windows/Linux",
+            "System Setup",
+        ],
     },
     {
         title: "Tools",
-        items: ["Git", "GitHub", "Virtual Machines", "VS Code", "AI tools"],
+        items: [
+            "ServiceNow",
+            "Active Directory",
+            "Git",
+            "GitHub",
+            "Virtual Machines",
+            "VS Code",
+            "AI Tools",
+        ],
     },
     {
         title: "Programming & Other",

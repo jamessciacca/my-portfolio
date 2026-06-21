@@ -46,30 +46,34 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Header isMobile={isMobile} />
-      <Routes>
-        <Route path='/' element={<Home singlePage={isMobile} />} />
-        <Route
-          path='/certificates'
-          element={isMobile ? <Navigate to="/#certificates" replace /> : <Certificates />}
-        />
-        <Route
-          path='/skills'
-          element={<Skills />}
-        />
-        <Route
-          path='/projects'
-          element={<Projects />}
-        />
-        <Route
-          path='/contact'
-          element={isMobile ? <Navigate to="/#contactForm" replace /> : <Contact />}
-        />
-        <Route path='/resume' element={<ResumePage />} />
-        <Route path='/MoreAboutMe' element={<MoreAbout />} />
-        <Route path='*' element={<Navigate to="/" replace />} />
-      </Routes>
-      <Footer />
+      <div className="app-shell">
+        <Header isMobile={isMobile} />
+        <main className="app-main">
+          <Routes>
+            <Route path='/' element={<Home singlePage={isMobile} />} />
+            <Route
+              path='/certificates'
+              element={isMobile ? <Navigate to="/#certificates" replace /> : <Certificates />}
+            />
+            <Route
+              path='/skills'
+              element={<Skills />}
+            />
+            <Route
+              path='/projects'
+              element={<Projects />}
+            />
+            <Route
+              path='/contact'
+              element={isMobile ? <Navigate to="/#contactForm" replace /> : <Contact />}
+            />
+            <Route path='/resume' element={<ResumePage />} />
+            <Route path='/MoreAboutMe' element={<MoreAbout />} />
+            <Route path='*' element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }

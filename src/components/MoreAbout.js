@@ -4,9 +4,9 @@ import selfPortrait from "../img/landing-headshot.jpeg";
 
 const aboutSections = [
     {
-        title: "Current Season",
+        title: "What am I up To?",
         content:
-            "As a recent college graduate I am in the Limbo phase, exploring what I want to pursue professionally and learning as much as I can to prepare for my career. I am working towards certificates in IT and cloud infrastructure, while also applying to a variety of roles in tech to find the right fit and get my foot in the door. My long-term goal is to build a career where I can combine technical skill, communication, and problem-solving. I am especially drawn to IT, infrastructure, and product-minded roles where I can contribute, keep learning, and grow into bigger responsibility over time. ",
+            "I just recently started my first role at Robert Wood Johnson Barnabas Health as a Field Analyst in the IT department. I am very eager to build and learn new skills in the healthcare industry. I am also working on a project to create websites for local buisnesses in my area, so if you know any small buisnesses that could use a website, send them my way! I am also always looking for new projects to work on, so if you have any ideas or oppurtunities, please reach out.",
     },
     {
         title: "Outside The Screen",
@@ -16,12 +16,12 @@ const aboutSections = [
     {
         title: "My Faith Journey",
         content:
-            "Faith to me is paramount in everything I do. I do not worry, I do not fear, and I am not anxious because I know Jesus has a plan for me. Following Jesus has been one of the most challenging things I have done, but the feeling of peace and real joy that comes from it is unmatched. I have always been Christian but I never knew what it meant to surrender to him until now. I work hard to keep my relationship with God at the center of my life and I am sure he will continue to guide me in the right direction as I navigate the next season of life.",
+            "Faith in Jesus Christ has been the most important part of my life and has shaped me into the person I am today. I was raised in a Christian household and have been attending church my whole life. I have been through many ups and downs in my faith journey, but through it all, I have always felt God's presence and guidance. My faith has given me hope, strength, and purpose, and I am grateful for the ways it has impacted my life.",
     },
 ];
 
 const quickFacts = [
-    "Christian and Sicilian heritage",
+    "Born and raised in New Jersey",
     "Weightlifting and fitness enthusiast",
     "I love eating and trying new foods",
     "Reached top 5% in Warzone Ranked play",

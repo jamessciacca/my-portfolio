@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import devdirect from "../img/devdirect.png";
 import petroasting from "../img/petroasting.png";
 import fitnessfusion from "../img/fitnessfusion.png";
@@ -13,6 +13,7 @@ import jamaLogo from "../img/jama-logo.png";
 const resumeProjects = [
     {
         source: "Resume",
+        category: "Full Stack",
         title: "JAMA",
         date: "April 2026",
         stack: "React (Vite), JavaScript, CSS, Node.js, Express, CORS, GitHub Pages, Render",
@@ -29,6 +30,7 @@ const resumeProjects = [
     },
     {
         source: "Resume",
+        category: "Front End",
         title: "jamessciacca.com",
         date: "May 2023 - Present",
         stack: "React, JavaScript, HTML/CSS",
@@ -41,6 +43,7 @@ const resumeProjects = [
     },
     {
         source: "Resume",
+        category: "IT Labs",
         title: "System Troubleshooting and Configuration Lab",
         date: "January 2026",
         stack: "Windows, Networking",
@@ -53,6 +56,7 @@ const resumeProjects = [
     },
     {
         source: "Resume",
+        category: "IT Labs",
         title: "Home Lab Environment",
         date: "February 2026",
         stack: "Linux, Virtual Machines, Networking",
@@ -68,6 +72,7 @@ const resumeProjects = [
 const legacyProjects = [
     {
         source: "Portfolio",
+        category: "Full Stack",
         title: "JAT (HACKRU)",
         date: "HackRU 2023",
         stack: "MongoDB, Express.js, React.js, Node.js, TailwindCSS, Auth0",
@@ -81,6 +86,7 @@ const legacyProjects = [
     },
     {
         source: "Portfolio",
+        category: "Full Stack",
         title: "Dev Direct",
         date: "2023",
         stack: "HTML, CSS, React, Node.js, Express.js, MongoDB",
@@ -97,6 +103,7 @@ const legacyProjects = [
     },
     {
         source: "Portfolio",
+        category: "Full Stack",
         title: "Pet Roasting App",
         date: "2023",
         stack: "Handlebars, CSS, Node.js, Express.js, SQL",
@@ -113,6 +120,7 @@ const legacyProjects = [
     },
     {
         source: "Portfolio",
+        category: "Front End",
         title: "Fitness Fusion",
         date: "2023",
         stack: "HTML, CSS, JavaScript, jQuery, Tailwind",
@@ -129,6 +137,7 @@ const legacyProjects = [
     },
     {
         source: "Portfolio",
+        category: "Backend",
         title: "SQL Employee Tracker",
         date: "2023",
         stack: "Node.js, Inquirer, SQL",
@@ -142,6 +151,7 @@ const legacyProjects = [
     },
     {
         source: "Portfolio",
+        category: "Front End",
         title: "Coding Quiz",
         date: "2023",
         stack: "HTML, CSS, JavaScript, jQuery",
@@ -158,8 +168,14 @@ const legacyProjects = [
     },
 ];
 
+const projectFilters = ["All", "IT Labs", "Full Stack", "Front End", "Backend"];
+
 function Projects() {
+    const [activeFilter, setActiveFilter] = useState("All");
     const allProjects = [...resumeProjects, ...legacyProjects];
+    const visibleProjects = activeFilter === "All"
+        ? allProjects
+        : allProjects.filter((project) => project.category === activeFilter);
 
     return (
         <>
@@ -171,9 +187,30 @@ function Projects() {
                         A combination of portfolio builds, coursework, and hands-on technical labs.
                     </p>
                 </div>
+                <div className="project-filters" aria-label="Filter projects by category">
+                    {projectFilters.map((filter) => (
+                        <button
+                            key={filter}
+                            type="button"
+                            className={`project-filter ${activeFilter === filter ? "is-active" : ""}`}
+                            onClick={() => setActiveFilter(filter)}
+                            aria-pressed={activeFilter === filter}
+                        >
+                            {filter}
+                        </button>
+                    ))}
+                    <span className="project-filter-count" aria-live="polite">
+                        {visibleProjects.length} {visibleProjects.length === 1 ? "project" : "projects"}
+                    </span>
+                </div>
                 <div className="project-grid">
-                    {allProjects.map((project, index) => (
-                        <article key={project.title} className="project-tile" style={{ "--stagger": index % 6 }}>
+                    {visibleProjects.map((project, index) => (
+                        <article
+                            key={`${activeFilter}-${project.title}`}
+                            className="project-tile"
+                            style={{ "--stagger": index % 6 }}
+                        >
+                            <span className="project-badge">{project.category}</span>
                             <div className="project-preview-box">
                                 {project.image ? (
                                     <img className="project-preview" src={project.image} alt={`${project.title} preview`} />
