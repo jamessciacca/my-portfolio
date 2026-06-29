@@ -2,13 +2,25 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 //importing image
-import logo from "../img/logo.png";
+import memoji from "../img/memoji.png";
 
 //creating header function
 function Header({ isMobile = false }) {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
     const [menuOpen, setMenuOpen] = React.useState(false);
+    const [theme, setTheme] = React.useState(() => {
+        if (typeof window === "undefined") {
+            return "dark";
+        }
+
+        const savedTheme = window.localStorage.getItem("portfolio-theme");
+        if (savedTheme) {
+            return savedTheme;
+        }
+
+        return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    });
     const isActive = (path) => location.pathname === path;
     const isHashActive = (hash) => location.pathname === "/" && location.hash === hash;
 
@@ -16,18 +28,42 @@ function Header({ isMobile = false }) {
         setMenuOpen(false);
     }, [location.pathname, location.hash]);
 
+    React.useEffect(() => {
+        document.documentElement.dataset.theme = theme;
+        window.localStorage.setItem("portfolio-theme", theme);
+
+        const themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) {
+            themeMeta.setAttribute("content", theme === "light" ? "#F5F7FA" : "#0E1116");
+        }
+    }, [theme]);
+
     const toggleMenu = () => setMenuOpen((prev) => !prev);
+    const toggleTheme = () => setTheme((currentTheme) => currentTheme === "light" ? "dark" : "light");
+    const nextThemeLabel = theme === "light" ? "Dark" : "Light";
+    const nextThemeIcon = theme === "light" ? "🌙" : "☀️";
 
     return (
         <>
         <section id="header" className={`p-4 ${isHomePage ? "" : "compact-header"}`}>
         <div className={`header-row flex items-center ${isMobile ? "mobile-header-row" : ""}`}>
-            {/* Logo Image and Text */}
-            <Link className="header-logo-link" to="/">
-                <img id='headerlogo' src={logo} alt="JRS Logo" />
-            </Link>
+            {isMobile ? (
+                <Link className="header-brand-link" to="/" aria-label="James Sciacca home">
+                    <img className="header-avatar" src={memoji} alt="" aria-hidden="true" />
+                    <span className="header-brand-text">James Sciacca</span>
+                </Link>
+            ) : null}
             {isMobile ? (
                 <>
+                    <button
+                        className="theme-toggle"
+                        type="button"
+                        onClick={toggleTheme}
+                        aria-label={`Switch to ${nextThemeLabel.toLowerCase()} mode`}
+                        aria-pressed={theme === "light"}
+                    >
+                        <span aria-hidden="true">{nextThemeIcon}</span>
+                    </button>
                     <button
                         className={`hamburger-btn ${menuOpen ? "is-open" : ""}`}
                         type="button"
@@ -49,7 +85,18 @@ function Header({ isMobile = false }) {
                     <li className={`nav-link nav-link-ltr ${isActive("/projects") ? "active-nav" : ""}`}><Link to="/projects">Projects</Link></li>
                     <li className={`nav-link nav-link-ltr ${isActive("/MoreAboutMe") ? "active-nav" : ""}`}><Link to="/MoreAboutMe">About Me</Link></li>
                     <li id='contactNav' className={`nav-link nav-link-ltr ${isActive("/contact") ? "active-nav" : ""}`}><Link to="/contact">Contact</Link></li>
-                    <li className={`nav-link nav-link-ltr ${isActive("/resume") ? "active-nav" : ""}`}><Link to="/resume">Resume</Link></li>
+                    <li className={`nav-link nav-link-ltr resume-nav ${isActive("/resume") ? "active-nav" : ""}`}><Link to="/resume">Resume</Link></li>
+                    <li className="theme-toggle-item">
+                        <button
+                            className="theme-toggle"
+                            type="button"
+                            onClick={toggleTheme}
+                            aria-label={`Switch to ${nextThemeLabel.toLowerCase()} mode`}
+                            aria-pressed={theme === "light"}
+                        >
+                            <span aria-hidden="true">{nextThemeIcon}</span>
+                        </button>
+                    </li>
                 </ul>
             )}
         </div>

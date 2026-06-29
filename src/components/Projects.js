@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import devdirect from "../img/devdirect.png";
-import petroasting from "../img/petroasting.png";
 import fitnessfusion from "../img/fitnessfusion.png";
-import sqlproject from "../img/sqlproject.png";
 import codequiz from "../img/codequiz.png";
 import JAT from "../img/JAT.jpg";
 import memoji from "../img/memoji.png";
@@ -10,238 +8,245 @@ import linuxduck from "../img/linuxduck.jpeg";
 import systemTroubleshootingImg from "../img/system-troubleshooting.jpg";
 import jamaLogo from "../img/jama-logo.png";
 
-const resumeProjects = [
+const projects = [
     {
-        source: "Resume",
-        category: "Full Stack",
+        category: "Web",
+        status: "Completed",
         title: "JAMA",
-        date: "April 2026",
-        stack: "React (Vite), JavaScript, CSS, Node.js, Express, CORS, GitHub Pages, Render",
+        description: "A full-stack monitoring dashboard for checking website uptime, HTTP status, and response times.",
         image: jamaLogo,
-        points: [
-            "Built a full-stack monitoring dashboard to check website availability, HTTP status, and response times in a clean interface.",
-            "Connected a React frontend to an Express API that performs live health checks and returns real-time latency data.",
-            "Deployed the frontend on GitHub Pages and the backend on Render to demonstrate end-to-end delivery across platforms.",
+        tech: ["React", "JavaScript", "Node.js", "Express", "GitHub Pages", "Render"],
+        highlights: [
+            "Built a responsive dashboard for live website health checks.",
+            "Connected the frontend to an Express API for real-time latency data.",
+            "Deployed the frontend and backend across production hosting platforms.",
         ],
         links: [
             { label: "GitHub", href: "https://github.com/jamessciacca/JAMA" },
-            { label: "Live", href: "https://jamessciacca.github.io/JAMA/" },
+            { label: "Live Demo", href: "https://jamessciacca.github.io/JAMA/" },
         ],
     },
     {
-        source: "Resume",
-        category: "Front End",
+        category: "Web",
+        status: "Personal Project",
         title: "jamessciacca.com",
-        date: "May 2023 - Present",
-        stack: "React, JavaScript, HTML/CSS",
+        description: "A personal portfolio site for showcasing projects, certifications, technical skills, and experience.",
         image: memoji,
-        points: [
-            "Built a personal website to showcase projects, certifications, and experience.",
-            "Created a clean and responsive design using React and basic front-end tools.",
-            "Used GitHub to manage updates and keep the project organized.",
+        tech: ["React", "JavaScript", "HTML", "CSS"],
+        highlights: [
+            "Organized portfolio content into responsive sections and routes.",
+            "Refined the visual system for a professional engineering portfolio.",
+            "Used GitHub for version control and ongoing updates.",
         ],
     },
     {
-        source: "Resume",
-        category: "IT Labs",
+        category: "IT",
+        status: "Completed",
         title: "System Troubleshooting and Configuration Lab",
-        date: "January 2026",
-        stack: "Windows, Networking",
+        description: "A practical lab focused on diagnosing and resolving common workstation and network issues.",
         image: systemTroubleshootingImg,
-        points: [
-            "Practiced diagnosing and resolving common system and network issues.",
-            "Configured system settings, drivers, and basic network connections.",
-            "Applied structured troubleshooting steps to identify and fix technical problems.",
+        tech: ["Windows", "Networking", "Drivers", "System Configuration"],
+        highlights: [
+            "Practiced structured troubleshooting across system and network scenarios.",
+            "Configured system settings, drivers, and connectivity basics.",
+            "Documented repeatable steps for resolving common technical issues.",
         ],
     },
     {
-        source: "Resume",
-        category: "IT Labs",
+        category: "IT",
+        status: "Completed",
         title: "Home Lab Environment",
-        date: "February 2026",
-        stack: "Linux, Virtual Machines, Networking",
+        description: "A virtualized lab environment for practicing Linux, networking, and basic system administration.",
         image: linuxduck,
-        points: [
-            "Set up virtual machines to practice working with Linux systems and networking.",
+        tech: ["Linux", "Virtual Machines", "Networking", "Troubleshooting"],
+        highlights: [
+            "Set up virtual machines for hands-on infrastructure practice.",
             "Configured IP settings and tested connectivity between systems.",
-            "Used basic networking tools to troubleshoot connection and system issues.",
+            "Used networking tools to diagnose system and connection issues.",
         ],
     },
-];
-
-const legacyProjects = [
     {
-        source: "Portfolio",
-        category: "Full Stack",
-        title: "JAT (HACKRU)",
-        date: "HackRU 2023",
-        stack: "MongoDB, Express.js, React.js, Node.js, TailwindCSS, Auth0",
+        category: "Software",
+        status: "Completed",
+        title: "JAT",
+        description: "A MERN application built during HackRU to help users track job applications and interview progress.",
         image: JAT,
-        points: [
-            "Built in 24 hours during HackRU to track job applications and interview stages.",
-            "Added goals and streak tracking to encourage consistent applications.",
-            "Collaborated as a team to ship a full working MERN application under hackathon time pressure.",
+        tech: ["MongoDB", "Express", "React", "Node.js", "Tailwind", "Auth0"],
+        highlights: [
+            "Built and shipped a working application during a 24-hour hackathon.",
+            "Added application stages, goals, and streak tracking.",
+            "Collaborated with a team under tight delivery constraints.",
         ],
         links: [{ label: "GitHub", href: "https://github.com/justbautista/jat" }],
     },
     {
-        source: "Portfolio",
-        category: "Full Stack",
+        category: "Software",
+        status: "Completed",
         title: "Dev Direct",
-        date: "2023",
-        stack: "HTML, CSS, React, Node.js, Express.js, MongoDB",
+        description: "A full-stack networking app designed to help developers connect and collaborate globally.",
         image: devdirect,
-        points: [
-            "Full stack MERN app for developers to connect and network globally.",
-            "Implemented backend server setup, authentication, and API routes.",
-            "Contributed to CSS styling and responsive behavior.",
+        tech: ["React", "Node.js", "Express", "MongoDB", "CSS"],
+        highlights: [
+            "Contributed backend server setup, authentication, and API routes.",
+            "Supported responsive page styling and front-end implementation.",
+            "Worked across the MERN stack in a collaborative codebase.",
         ],
         links: [
             { label: "GitHub", href: "https://github.com/Animeet/DevDirect" },
-            { label: "Live", href: "https://dev-direct.herokuapp.com/" },
+            { label: "Live Demo", href: "https://dev-direct.herokuapp.com/" },
         ],
     },
     {
-        source: "Portfolio",
-        category: "Full Stack",
-        title: "Pet Roasting App",
-        date: "2023",
-        stack: "Handlebars, CSS, Node.js, Express.js, SQL",
-        image: petroasting,
-        points: [
-            "Created a fun social app for uploading pet photos with roast captions.",
-            "Led page styling and responsive design implementation.",
-            "Assisted backend development and integration when needed.",
-        ],
-        links: [
-            { label: "GitHub", href: "https://github.com/MegMathis/Pet_Roasting_App" },
-            { label: "Live", href: "https://pet-roasting-app.herokuapp.com/" },
-        ],
-    },
-    {
-        source: "Portfolio",
-        category: "Front End",
+        category: "Web",
+        status: "Completed",
         title: "Fitness Fusion",
-        date: "2023",
-        stack: "HTML, CSS, JavaScript, jQuery, Tailwind",
+        description: "A browser app for finding workouts and motivational content based on user input.",
         image: fitnessfusion,
-        points: [
-            "Workout finder app powered by user input and external APIs.",
-            "Integrated APIs for workout data and motivational quotes.",
-            "Implemented core JavaScript features to make the app functional.",
+        tech: ["HTML", "CSS", "JavaScript", "jQuery", "APIs"],
+        highlights: [
+            "Integrated external APIs for workout and motivational content.",
+            "Implemented core JavaScript features for the app flow.",
+            "Built responsive front-end screens for a lightweight user experience.",
         ],
         links: [
             { label: "GitHub", href: "https://github.com/jamessciacca/fitness-fusion-workout-maker" },
-            { label: "Live Site", href: "https://jamessciacca.github.io/fitness-fusion-workout-maker/" },
+            { label: "Live Demo", href: "https://jamessciacca.github.io/fitness-fusion-workout-maker/" },
         ],
     },
     {
-        source: "Portfolio",
-        category: "Backend",
+        category: "Software",
+        status: "Completed",
         title: "SQL Employee Tracker",
-        date: "2023",
-        stack: "Node.js, Inquirer, SQL",
-        image: sqlproject,
-        points: [
-            "CLI application to manage departments, roles, and employees.",
-            "Built relational workflow for viewing, adding, and updating records.",
-            "Designed around practical SQL query usage.",
+        description: "A command-line application for managing departments, roles, and employee records.",
+        tech: ["Node.js", "Inquirer", "SQL"],
+        highlights: [
+            "Designed relational workflows for viewing and updating records.",
+            "Practiced SQL queries and command-line application structure.",
+            "Created a focused backend-style tool for employee data management.",
         ],
         links: [{ label: "GitHub", href: "https://github.com/jamessciacca/my-portfolio" }],
     },
     {
-        source: "Portfolio",
-        category: "Front End",
+        category: "Web",
+        status: "Completed",
         title: "Coding Quiz",
-        date: "2023",
-        stack: "HTML, CSS, JavaScript, jQuery",
+        description: "A browser-based coding quiz with local score tracking and interactive question flow.",
         image: codequiz,
-        points: [
-            "Browser-based coding quiz with local storage score tracking.",
-            "One of the first JavaScript-heavy projects in your portfolio.",
-            "Focused on DOM manipulation and interactive quiz flow.",
+        tech: ["HTML", "CSS", "JavaScript", "jQuery"],
+        highlights: [
+            "Built dynamic quiz interactions with DOM manipulation.",
+            "Stored score history locally in the browser.",
+            "Practiced core front-end logic and user interaction patterns.",
         ],
         links: [
             { label: "GitHub", href: "https://github.com/jamessciacca/online-coding-quiz" },
-            { label: "Live Site", href: "https://jamessciacca.github.io/online-coding-quiz/" },
+            { label: "Live Demo", href: "https://jamessciacca.github.io/online-coding-quiz/" },
         ],
     },
 ];
 
-const projectFilters = ["All", "IT Labs", "Full Stack", "Front End", "Backend"];
+const projectFilters = ["All", "Web", "Software", "IT"];
 
 function Projects() {
     const [activeFilter, setActiveFilter] = useState("All");
-    const allProjects = [...resumeProjects, ...legacyProjects];
     const visibleProjects = activeFilter === "All"
-        ? allProjects
-        : allProjects.filter((project) => project.category === activeFilter);
+        ? projects
+        : projects.filter((project) => project.category === activeFilter);
 
     return (
-        <>
-            <section id="projectSection" className="container mx-auto px-6 pb-10 md:px-10">
-                <div className="section-heading section-heading-compact">
-                    <p className="section-kicker">Selected Work</p>
-                    <h1 id="projecth1" className="section-title">Projects</h1>
-                    <p className="section-intro">
-                        A combination of portfolio builds, coursework, and hands-on technical labs.
+        <section id="projectSection" className="container mx-auto px-6 pb-10 md:px-10">
+            <div className="section-heading section-heading-compact">
+                <p className="section-kicker">Selected Work</p>
+                <h1 id="projecth1" className="section-title">Selected Projects</h1>
+                <p className="section-intro">
+                    A collection of software, web, and technical projects that highlight my experience with development, problem-solving, and real-world implementation.
+                </p>
+            </div>
+
+            <div className="project-filters" aria-label="Filter projects by category">
+                {projectFilters.map((filter) => (
+                    <button
+                        key={filter}
+                        type="button"
+                        className={`project-filter ${activeFilter === filter ? "is-active" : ""}`}
+                        onClick={() => setActiveFilter(filter)}
+                        aria-pressed={activeFilter === filter}
+                    >
+                        {filter}
+                    </button>
+                ))}
+                <span className="project-filter-count" aria-live="polite">
+                    {visibleProjects.length} {visibleProjects.length === 1 ? "project" : "projects"}
+                </span>
+            </div>
+
+            <div className="project-grid">
+                {visibleProjects.map((project, index) => (
+                    <article
+                        key={`${project.category}-${project.title}`}
+                        className="project-tile"
+                        style={{ "--stagger": index % 6 }}
+                    >
+                        <div className="project-card-topline">
+                            <span className="project-badge">{project.category}</span>
+                            <span className="project-status">{project.status}</span>
+                        </div>
+
+                        <div className="project-header">
+                            {project.image ? (
+                                <img
+                                    className="project-thumb"
+                                    src={project.image}
+                                    alt={`${project.title} preview`}
+                                />
+                            ) : null}
+                            <h2 className="project-title">{project.title}</h2>
+                        </div>
+                        <p className="project-description">{project.description}</p>
+
+                        <ul className="project-tech-list" aria-label={`${project.title} technologies`}>
+                            {project.tech.map((tech) => (
+                                <li key={tech} className="project-tech-chip">
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <ul className="project-points">
+                            {project.highlights.map((highlight) => (
+                                <li key={highlight}>{highlight}</li>
+                            ))}
+                        </ul>
+
+                        {project.links ? (
+                            <div className="project-links" aria-label={`${project.title} links`}>
+                                {project.links.map((link) => (
+                                    <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+                        ) : null}
+                    </article>
+                ))}
+            </div>
+
+            <aside className="projects-in-progress" aria-label="More projects in progress">
+                <div className="projects-progress-visual" aria-hidden="true">
+                    <span className="projects-progress-node" />
+                    <span className="projects-progress-line" />
+                    <span className="projects-progress-node" />
+                    <span className="projects-progress-line" />
+                    <span className="projects-progress-node" />
+                </div>
+                <div>
+                    <p className="projects-progress-kicker">More in progress</p>
+                    <p className="projects-progress-copy">
+                        New software, IT, and AI automation projects are being built and added here.
                     </p>
                 </div>
-                <div className="project-filters" aria-label="Filter projects by category">
-                    {projectFilters.map((filter) => (
-                        <button
-                            key={filter}
-                            type="button"
-                            className={`project-filter ${activeFilter === filter ? "is-active" : ""}`}
-                            onClick={() => setActiveFilter(filter)}
-                            aria-pressed={activeFilter === filter}
-                        >
-                            {filter}
-                        </button>
-                    ))}
-                    <span className="project-filter-count" aria-live="polite">
-                        {visibleProjects.length} {visibleProjects.length === 1 ? "project" : "projects"}
-                    </span>
-                </div>
-                <div className="project-grid">
-                    {visibleProjects.map((project, index) => (
-                        <article
-                            key={`${activeFilter}-${project.title}`}
-                            className="project-tile"
-                            style={{ "--stagger": index % 6 }}
-                        >
-                            <span className="project-badge">{project.category}</span>
-                            <div className="project-preview-box">
-                                {project.image ? (
-                                    <img className="project-preview" src={project.image} alt={`${project.title} preview`} />
-                                ) : (
-                                    <span className="project-preview-placeholder">No image</span>
-                                )}
-                            </div>
-                            <div className="project-header">
-                                <h2 className="project-title">{project.title}</h2>
-                                <p className="project-date">{project.date}</p>
-                            </div>
-                            <p className="project-stack">{project.stack}</p>
-                            <ul className="project-points">
-                                {project.points.map((point) => (
-                                    <li key={point}>{point}</li>
-                                ))}
-                            </ul>
-                            {project.links ? (
-                                <div className="project-links">
-                                    {project.links.map((link) => (
-                                        <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
-                                            {link.label}
-                                        </a>
-                                    ))}
-                                </div>
-                            ) : null}
-                        </article>
-                    ))}
-                </div>
-            </section>
-        </>
+            </aside>
+        </section>
     );
 }
 

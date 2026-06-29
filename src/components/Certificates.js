@@ -13,7 +13,7 @@ const certificates = [
         title: 'CompTIA Network+',
         issuer: 'CompTIA',
         category: 'Security',
-        year: 'Expected June 2026',
+        year: 'Expected July 2026',
         logo: '/cert-logos/comptia-network-plus.png',
         logoAlt: 'CompTIA Network+ certification logo',
     },

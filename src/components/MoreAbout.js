@@ -16,7 +16,7 @@ const aboutSections = [
     {
         title: "My Faith Journey",
         content:
-            "Faith in Jesus Christ has been the most important part of my life and has shaped me into the person I am today. I was raised in a Christian household and have been attending church my whole life. I have been through many ups and downs in my faith journey, but through it all, I have always felt God's presence and guidance. My faith has given me hope, strength, and purpose, and I am grateful for the ways it has impacted my life.",
+            "Faith has always been an important part of my life and continues to shape who I am both personally and professionally. Growing up in a Christian household gave me a strong foundation, and over the years my faith has grown through both challenges and milestones. It reminds me to approach others with humility, integrity, and compassion, while providing a sense of purpose and perspective in everything I do.",
     },
 ];
 
