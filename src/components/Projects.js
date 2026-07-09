@@ -7,8 +7,23 @@ import memoji from "../img/memoji.png";
 import linuxduck from "../img/linuxduck.jpeg";
 import systemTroubleshootingImg from "../img/system-troubleshooting.jpg";
 import jamaLogo from "../img/jama-logo.png";
+import mlbAnalystLogo from "../img/mlb-analyst.png";
 
 const projects = [
+    {
+        category: "AI",
+        status: "In Progress",
+        title: "MLB Analyst Model",
+        description: "A baseball analytics model for evaluating MLB matchups, team trends, and data-driven game insights.",
+        image: mlbAnalystLogo,
+        tech: ["Python", "Pandas", "Machine Learning", "APIs", "Data Analysis"],
+        highlights: [
+            "Collecting and organizing MLB stats to compare teams, pitchers, and recent performance.",
+            "Building model logic to identify matchup advantages and support game predictions.",
+            "Designing an analyst-style workflow that turns raw baseball data into clear recommendations.",
+        ],
+        links: [{ label: "GitHub", href: "https://github.com/jamessciacca/MLB-AI-Analyst" }],
+    },
     {
         category: "Web",
         status: "Completed",
@@ -145,7 +160,7 @@ const projects = [
     },
 ];
 
-const projectFilters = ["All", "Web", "Software", "IT"];
+const projectFilters = ["All", "Web", "Software", "IT", "AI"];
 
 function Projects() {
     const [activeFilter, setActiveFilter] = useState("All");
