@@ -4593,6 +4593,14 @@ hr {
   width: 52px;
 }
 
+.project-thumb-wide {
+  aspect-ratio: auto;
+  background: #fff;
+  flex-basis: 112px;
+  object-fit: contain;
+  width: 112px;
+}
+
 #projectSection .project-title {
   color: var(--color-text);
   font-size: clamp(1.16rem, 1.8vw, 1.5rem);
@@ -4832,6 +4840,11 @@ hr {
     flex-basis: 46px;
     height: 46px;
     width: 46px;
+  }
+
+  .project-thumb-wide {
+    flex-basis: 96px;
+    width: 96px;
   }
 
   .projects-in-progress {

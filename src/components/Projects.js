@@ -8,8 +8,27 @@ import linuxduck from "../img/linuxduck.jpeg";
 import systemTroubleshootingImg from "../img/system-troubleshooting.jpg";
 import jamaLogo from "../img/jama-logo.png";
 import mlbAnalystLogo from "../img/mlb-analyst.png";
+import jwsitesLogo from "../img/jwsites-logo.png";
 
 const projects = [
+    {
+        category: "Web",
+        status: "Live",
+        title: "JWSites",
+        description: "A production-ready website for offering custom business websites, personal portfolios, hosting, and ongoing support.",
+        image: jwsitesLogo,
+        imageVariant: "wide",
+        tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Resend", "Vercel"],
+        highlights: [
+            "Built responsive service, pricing, portfolio, and website-concept pages for prospective clients.",
+            "Created a validated contact workflow that sends project inquiries through a secure server-side API.",
+            "Added SEO metadata, sitemap support, and a production deployment on a custom domain.",
+        ],
+        links: [
+            { label: "GitHub", href: "https://github.com/jamessciacca/jwsites" },
+            { label: "Live Site", href: "https://jwsites.net" },
+        ],
+    },
     {
         category: "AI",
         status: "In Progress",
@@ -210,7 +229,7 @@ function Projects() {
                         <div className="project-header">
                             {project.image ? (
                                 <img
-                                    className="project-thumb"
+                                    className={`project-thumb ${project.imageVariant === "wide" ? "project-thumb-wide" : ""}`}
                                     src={project.image}
                                     alt={`${project.title} preview`}
                                 />
