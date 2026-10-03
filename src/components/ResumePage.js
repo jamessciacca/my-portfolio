@@ -1,5 +1,5 @@
 import React from "react";
-import resumePdf from "../pdf/JamesSciacca_Resume.pdf";
+import resumePdf from "../pdf/James_Sciacca_Resume.pdf";
 
 function ResumePage() {
     return (
@@ -17,7 +17,7 @@ function ResumePage() {
                     <a
                         className="resume-download"
                         href={resumePdf}
-                        download="JamesSciacca_Resume.pdf"
+                        download="James_Sciacca_Resume.pdf"
                     >
                         Download PDF
                     </a>

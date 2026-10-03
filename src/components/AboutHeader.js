@@ -1,7 +1,7 @@
 //importing react 
 import React from "react";
 
-import Resume from "../pdf/ResumeSoftwareDev.pdf";
+import Resume from "../pdf/James_Sciacca_Resume.pdf";
 
 //creating header function
 function AboutHeader() {

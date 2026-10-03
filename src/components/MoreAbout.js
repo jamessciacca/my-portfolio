@@ -4,9 +4,9 @@ import selfPortrait from "../img/landing-headshot.jpeg";
 
 const aboutSections = [
     {
-        title: "What am I up To?",
+        title: "What Am I Up To?",
         content:
-            "I just recently started my first role at Robert Wood Johnson Barnabas Health as a Field Analyst in the IT department. I am very eager to build and learn new skills in the healthcare industry. I am also working on a project to create websites for local buisnesses in my area, so if you know any small buisnesses that could use a website, send them my way! I am also always looking for new projects to work on, so if you have any ideas or oppurtunities, please reach out.",
+            "I have started a new role as a Project Coordinator at Isos Technology, building on my background in IT and Computer Science. I am excited to grow in project coordination and bring my technical perspective and problem-solving skills to this next step in my career. Alongside my role, I am continuing to create websites for local businesses in my area. If you know a small business that could use a website, or have a project idea or opportunity to share, please reach out!",
     },
     {
         title: "Outside The Screen",

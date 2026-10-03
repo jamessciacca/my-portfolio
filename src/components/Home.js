@@ -4,6 +4,14 @@ import Certificates from "./Certificates";
 import Contact from "./Contact";
 
 const mobileExploreItems = [
+    /* Timeline is on hold.
+    {
+        title: 'Timeline',
+        description: 'Follow my story, from Holmdel to where I am today.',
+        href: '/timeline',
+        tag: 'My Journey',
+    },
+    */
     {
         title: 'Projects',
         description: 'See portfolio builds, technical labs, and shipped work.',

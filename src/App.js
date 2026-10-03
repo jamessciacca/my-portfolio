@@ -11,6 +11,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ResumePage from './components/ResumePage';
 import Footer from './components/Footer';
+// Timeline is on hold until it is ready to publish.
+// import Timeline from './components/Timeline';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -69,6 +71,7 @@ function App() {
             />
             <Route path='/resume' element={<ResumePage />} />
             <Route path='/MoreAboutMe' element={<MoreAbout />} />
+            {/* <Route path='/timeline' element={<Timeline />} /> */}
             <Route path='*' element={<Navigate to="/" replace />} />
           </Routes>
         </main>

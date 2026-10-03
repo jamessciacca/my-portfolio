@@ -18,7 +18,7 @@ function Landing({ isMobile = false }) {
                 <div className="landing-copy">
                     <h5 id='intro' className="font-mono text-lg">Hello, my name is</h5>
                     <h1 id='name' className="font-mono">James Sciacca</h1>
-                    <h1 id='fullStack' className="font-mono">Field Analyst @RWJBH|Rutgers Alumni</h1>
+                    <h1 id='fullStack' className="font-mono">PC at Isos Technology | Rutgers Alumni</h1>
                     <p id='bio' className="font-mono mb-2">{introText}</p>
                 </div>
                 <div className={`landing-visual ${isMobile ? "landing-visual-hidden" : ""}`}>

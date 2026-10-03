@@ -84,6 +84,9 @@ function Header({ isMobile = false }) {
                     <li className={`nav-link nav-link-ltr ${isActive("/skills") ? "active-nav" : ""}`}><Link to="/skills">Skills</Link></li>
                     <li className={`nav-link nav-link-ltr ${isActive("/projects") ? "active-nav" : ""}`}><Link to="/projects">Projects</Link></li>
                     <li className={`nav-link nav-link-ltr ${isActive("/MoreAboutMe") ? "active-nav" : ""}`}><Link to="/MoreAboutMe">About Me</Link></li>
+                    {/* Timeline is on hold.
+                    <li className={`nav-link nav-link-ltr ${isActive("/timeline") ? "active-nav" : ""}`}><Link to="/timeline">Timeline</Link></li>
+                    */}
                     <li id='contactNav' className={`nav-link nav-link-ltr ${isActive("/contact") ? "active-nav" : ""}`}><Link to="/contact">Contact</Link></li>
                     <li className={`nav-link nav-link-ltr resume-nav ${isActive("/resume") ? "active-nav" : ""}`}><Link to="/resume">Resume</Link></li>
                     <li className="theme-toggle-item">
@@ -108,6 +111,9 @@ function Header({ isMobile = false }) {
                     <li><Link className={isActive("/projects") ? "mobile-menu-link-active" : ""} to="/projects">Projects</Link></li>
                     <li><Link className={isActive("/skills") ? "mobile-menu-link-active" : ""} to="/skills">Skills</Link></li>
                     <li><Link className={isActive("/MoreAboutMe") ? "mobile-menu-link-active" : ""} to="/MoreAboutMe">About Me</Link></li>
+                    {/* Timeline is on hold.
+                    <li><Link className={isActive("/timeline") ? "mobile-menu-link-active" : ""} to="/timeline">Timeline</Link></li>
+                    */}
                     <li><Link className={isHashActive("#contactForm") ? "mobile-menu-link-active" : ""} to="/#contactForm">Contact</Link></li>
                     <li><Link className={isActive("/resume") ? "mobile-menu-link-active" : ""} to="/resume">Resume</Link></li>
                 </ul>

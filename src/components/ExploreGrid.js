@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const defaultExploreItems = [
+    /* Timeline is on hold.
+    {
+        title: 'Timeline',
+        description: 'Follow my story, from Holmdel to where I am today.',
+        href: '/timeline',
+        tag: 'My Journey',
+    },
+    */
     {
         title: 'Certificates',
         description: 'Professional credentials and completed programs.',
