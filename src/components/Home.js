@@ -19,12 +19,6 @@ const mobileExploreItems = [
         tag: 'Work',
     },
     {
-        title: 'Skills',
-        description: 'Browse the tools, technologies, and technical strengths I use.',
-        href: '/skills',
-        tag: 'Skills',
-    },
-    {
         title: 'About Me',
         description: 'Read more about my background, goals, and experience.',
         href: '/MoreAboutMe',

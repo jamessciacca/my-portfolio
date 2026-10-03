@@ -17,12 +17,6 @@ const defaultExploreItems = [
         tag: 'Credentials',
     },
     {
-        title: 'Skills',
-        description: 'Tech stack and tools I use to build products.',
-        href: '/skills',
-        tag: 'Toolkit',
-    },
-    {
         title: 'Projects',
         description: 'Real builds with outcomes, code, and demos.',
         href: '/projects',

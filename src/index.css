@@ -5195,7 +5195,6 @@ main,
 }
 
 [data-theme="light"] #navLink,
-[data-theme="light"] .header-row,
 [data-theme="light"] .mobile-menu,
 [data-theme="light"] .mobile-menu-list,
 [data-theme="light"] .mobile-menu-list li,
@@ -5397,6 +5396,11 @@ main,
 }
 
 @media (max-width: 820px) {
+  [data-theme="light"] .header-row {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: var(--color-border);
+  }
+
   #header {
     border-bottom: none;
   }
